@@ -12,4 +12,7 @@
 - `marketing/`: 販売戦略、ブランディング、市場調査
 - `content/`: ブログ記事、SNS投稿案、画像・動画素材
 - `business/`: 法務、物流、サプライヤー管理
+
+## ドキュメント
+- 競合調査（2026-01-14）: `marketing/strategy/competitive-research-2026-01-14.md`
 # project-hanoji
