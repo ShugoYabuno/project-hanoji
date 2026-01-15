@@ -3,6 +3,9 @@
 
 // --- Parameters ---
 
+// View Mode: Select "3D" or "BLUEPRINT" (2D Drawing)
+view_mode = "BLUEPRINT";
+
 // 1. Angles
 tenting_angle = 15;      // Z-axis rotation (Tenting) [degree]
 opening_angle = 30;      // Opening angle for V-shape (Total) [degree]
@@ -31,41 +34,9 @@ module button_cap(d) {
     cylinder(h=5, d=d-2, center=false);
 }
 
-// Standard Hitbox-style layout for one hand (Left side as base)
-module key_layout_half(is_right=false) {
-    // Layout coordinates (relative to thumb button)
-    // Adjust these based on standard leverless layout
-
-    // Thumb (Jump)
-    translate([0, 0, 0]) {
-        button_hole(btn_size_thumb);
-        button_cap(btn_size_thumb);
-    }
-
-    // Main Action Buttons (relative to thumb)
-    // Row 1 (Bottom)
-    translate([-60, 45, 0]) { button_hole(btn_size_action); button_cap(btn_size_action); } // Left / 4
-    translate([-35, 40, 0]) { button_hole(btn_size_action); button_cap(btn_size_action); } // Down / 2
-    translate([-10, 55, 0]) { button_hole(btn_size_action); button_cap(btn_size_action); } // Right / 6
-
-    // Row 2 (Top - Punch/Kick)
-    // Adjusting specifically for right hand logic later, but keeping generic structure here
-    // For a leverless, usually:
-    // Left side: Directionals
-    // Right side: Actions
-
-    // Let's define specific layouts for Left and Right hands
-}
-
+// Left Hand Layout Module
 module left_hand_layout() {
-    // Left Hand: Movement (Left, Down, Right) + L1/L2 etc
-
-    // Thumb (Jump/Up) - Shared or separate? Usually shared Up is handled by one, but for split lets assume typical split layout
-    // For standard leverless, "Up" is at the bottom center.
-    // In a V-shape split, we might have two Up buttons or one central one.
-    // Assuming standard "Split Hitbox" layout where each hand has specific buttons.
-
-    // Left Hand: Left, Down, Right
+    // Left Hand: Movement (Left, Down, Right)
     translate([-40, 50, 0]) { button_hole(btn_size_action); button_cap(btn_size_action); } // Left
     translate([-10, 40, 0]) { button_hole(btn_size_action); button_cap(btn_size_action); } // Down
     translate([ 20, 50, 0]) { button_hole(btn_size_action); button_cap(btn_size_action); } // Right
@@ -74,6 +45,7 @@ module left_hand_layout() {
     translate([ 30, -10, 0]) { button_hole(btn_size_thumb); button_cap(btn_size_thumb); }
 }
 
+// Right Hand Layout Module
 module right_hand_layout() {
     // Right Hand: 8 Action Buttons (Vewlix/Noir style)
 
@@ -113,10 +85,6 @@ module full_assembly() {
     // LEFT UNIT
     translate([-(split_distance/2), 0, 0])
     rotate([0, 0, half_opening_angle]) // Open V-shape
-    rotate([0, tenting_angle, 0])      // Tenting (Left side lifts Right edge? No, lifts Left edge usually means High-Left Low-Right?
-                                       // Standard tenting: Center is low, Outer is high.
-                                       // So Left Unit: Rotate around Y such that Left side goes UP.
-                                       // If axis is at X=0 (right edge of left unit), rotate +Y?
     translate([-60, 0, 0]) // Shift pivot point
     rotate([0, tenting_angle, 0])
     translate([60, 0, 0]) // Shift back
@@ -149,5 +117,31 @@ module full_assembly() {
 
 }
 
+// --- Render Logic ---
+
 $fn = 60; // Smoothness
-full_assembly();
+
+if (view_mode == "3D") {
+    full_assembly();
+} else if (view_mode == "BLUEPRINT") {
+
+    // 1. TOP VIEW (Plane XY)
+    translate([0, 200, 0]) {
+        color("Black") text("TOP VIEW", size=10, halign="center");
+        projection(cut=false) full_assembly();
+    }
+
+    // 2. FRONT VIEW (Looking from -Y)
+    translate([0, 0, 0]) {
+        color("Black") text("FRONT VIEW", size=10, halign="center");
+        // Rotate so Front faces Up (Z)
+        projection(cut=false) rotate([90, 0, 0]) full_assembly();
+    }
+
+    // 3. SIDE VIEW (Looking from +X, Right side)
+    translate([250, 0, 0]) {
+        color("Black") text("SIDE VIEW", size=10, halign="center");
+        // Rotate so Right faces Up (Z)
+        projection(cut=false) rotate([0, -90, 0]) full_assembly();
+    }
+}
