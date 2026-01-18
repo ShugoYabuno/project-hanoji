@@ -24,13 +24,11 @@
     - Avoid: Marketing buzzwords, over-promising, aggressive promotion.
 
 ## 4. Hardware & Design Guidelines
-- **Tools**:
-  - **Avoid**: OpenSCAD (due to precision issues).
-  - **Preferred**: Fusion 360 (implied, or other CAD tools suited for precise manufacturing).
+- **CAD Data Policy**: CAD files are NOT managed in this repository due to tool limitations (e.g. OpenSCAD precision).
 - **Design Philosophy**:
   - **Ergonomics First**: "Tenting" (tilt) and "Opening Angle" (V-shape) must always be paired. (Based on v1 failure analysis).
   - **Iterative Process**: Value physical prototyping and testing over theoretical perfection.
 
 ## 5. File Management
-- **Prototypes**: Manage versions clearly under `hardware/cad/prototypes/{version}/`.
+- **Prototypes**: Manage documentation and feedback under `docs/prototypes/{version}/`.
 - **Content**: Drafts go to `content/blog/drafts/`. Use descriptive filenames (e.g., `v1_feedback.md`).
