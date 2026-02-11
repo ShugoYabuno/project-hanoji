@@ -57,6 +57,8 @@
 - **Reader friendliness**:
   - Define jargon on first use (e.g., SOCD, PCBA, コンスルー).
   - When possible, include cost/time/sources (with “参考” notes).
+- **Style guardrails (writing)**:
+  - Avoid キメ台詞っぽいカギカッコ（「〜なんだ」「〜のです」等）で煽らない。強調は見出し・箇条書き・太字で行い、本文は地の文で淡々と書く。
 - **Visual ordering (recommended)**:
   - Finished/overview -> Process -> Failure close-up.
 
