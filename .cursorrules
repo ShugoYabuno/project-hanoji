@@ -32,3 +32,30 @@
 ## 5. File Management
 - **Prototypes**: Manage documentation and feedback under `docs/prototypes/{version}/`.
 - **Content**: Drafts go to `content/blog/drafts/`. Use descriptive filenames (e.g., `v1_feedback.md`).
+
+## 6. Information Publishing Policy (Blog/SNS) — Research-backed
+- **Purpose**: Share the journey and learning. Optimize for long-term trust and reusability of knowledge.
+- **Default stance**: "暫定"・"体感"・"検証中" を前提に書く（結論ありきにしない）。
+- **Recommended structure (default template)**:
+  - Motivation -> Hypothesis -> Small Test -> Findings (tentative) -> Next Step
+  - OR Motivation -> Hypothesis -> Result/Failure -> Next Step
+- **Expectation control (must have early)**:
+  - Put a short disclaimer near the top: 「この記事は完成報告ではなく試作ログ」「数値・結論は暫定」など。
+- **Failure handling (preferred)**:
+  - Share failures as value: Photo/visual (if possible) + cause hypothesis + recovery plan.
+- **Tone**:
+  - Confident about *your own experience*; cautious about general claims.
+  - Avoid sales-first messaging, especially in early posts.
+- **Reader friendliness**:
+  - Define jargon on first use (e.g., SOCD, PCBA, コンスルー).
+  - When possible, include cost/time/sources (with “参考” notes).
+- **Visual ordering (recommended)**:
+  - Finished/overview -> Process -> Failure close-up.
+
+## 7. First Blog Post Direction (Decision)
+- **Decision**: Use the "Hypothesis-verification log" style (案B).
+  - Core question: 「分割キーボードの発想は自作レバーレスにも効く？」を仮説として扱う。
+  - Include a small/cheap test (paper/cardboard positioning etc.) before full prototype discussion.
+  - End with "暫定の学び" + "次の一手" (explicit next actions).
+- **Reference**:
+  - Deep research summary: `docs/research/deepresearch/initial_posting_stance_report.md`
