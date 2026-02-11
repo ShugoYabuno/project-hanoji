@@ -39,6 +39,14 @@
 - **Recommended structure (default template)**:
   - Motivation -> Hypothesis -> Small Test -> Findings (tentative) -> Next Step
   - OR Motivation -> Hypothesis -> Result/Failure -> Next Step
+- **Article creation checklist (practical)**:
+  - **Hook (experience first)**: 冒頭は「なぜそれを気に入った／不満に思ったか」を**体験ベース**で書く（例: 肩こりが減った、手首が痛い、など）。断定ではなく「自分の場合」「体感では」を添える。
+  - **Expectation control**: 早い段階で「完成報告ではない」「暫定」「体感・観察ベース」を明記する。
+  - **Hypothesis as a question**: 仮説は言い切りではなく、できれば問いの形（〜では？）にして検証前提を明確にする。
+  - **Keep tests small**: 先に紙・段ボール・机上配置などの**小さく安い検証**を挟み、いきなり正解形状を決め打ちしない。
+  - **Terms for readers**: 専門用語（回内、背屈、テンティング、SOCD等）は**初出で一言補足**する。内部向けっぽい軸表現（例: Z軸回転）は避け、読者の理解優先に言い換える。
+  - **Write failures as value**: 失敗は「現象→原因仮説→回復策（次の一手）」の順で書く。強い一般化は避け、主語は自分の体験に寄せる。
+  - **Close with actions**: 締めは「暫定の学び（暫定ルール）」＋「次に試すこと」を**箇条書きで具体化**する（何を、どの方向に、なぜ）。
 - **Expectation control (must have early)**:
   - Put a short disclaimer near the top: 「この記事は完成報告ではなく試作ログ」「数値・結論は暫定」など。
 - **Failure handling (preferred)**:
