@@ -41,6 +41,7 @@
   - OR Motivation -> Hypothesis -> Result/Failure -> Next Step
 - **Article creation checklist (practical)**:
   - **Hook (experience first)**: 冒頭は「なぜそれを気に入った／不満に思ったか」を**体験ベース**で書く（例: 肩こりが減った、手首が痛い、など）。断定ではなく「自分の場合」「体感では」を添える。
+  - **Avoid content duplication**: 冒頭（導入）とメインセクション（各見出し内）で同じ内容を繰り返さない。冒頭は簡潔に興味を引く程度にとどめ、詳細は適切なセクションで一度だけ展開する。記事全体を通して、同じエピソードや体験を複数箇所で重複させないよう注意する。
   - **Expectation control**: 早い段階で「完成報告ではない」「暫定」「体感・観察ベース」を明記する。
   - **Hypothesis as a question**: 仮説は言い切りではなく、できれば問いの形（〜では？）にして検証前提を明確にする。
   - **Keep tests small**: 先に紙・段ボール・机上配置などの**小さく安い検証**を挟み、いきなり正解形状を決め打ちしない。
