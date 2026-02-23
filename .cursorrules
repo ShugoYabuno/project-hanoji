@@ -60,6 +60,9 @@
   - When possible, include cost/time/sources (with “参考” notes).
 - **Style guardrails (writing)**:
   - Avoid キメ台詞っぽいカギカッコ（「〜なんだ」「〜のです」等）で煽らない。強調は見出し・箇条書き・太字で行い、本文は地の文で淡々と書く。
+- **Markdown formatting for note.com**:
+  - When using bold (`**text**`) in blog drafts, ALWAYS add a half-width space after the closing `**` and before the next character (e.g., `**テキスト** です` not `**テキスト**です`). This ensures proper rendering on note.com.
+  - Apply this rule consistently across all bold text in articles, especially in bullet lists and inline emphasis.
 - **Visual ordering (recommended)**:
   - Finished/overview -> Process -> Failure close-up.
 
